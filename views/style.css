@@ -1,0 +1,159 @@
+
+
+body{
+    background: url("bkgrnd.jpg") no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: 'Adamina', serif;
+}
+
+
+.header{
+    background: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 80px;
+    opacity: 0.8;
+    padding-left: 10px;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.headerContent{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo{
+    color:maroon;
+    text-align: left;
+}
+
+h1.logo{
+    margin: 5px;
+    font-size: 80px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+
+.contentDiv{
+    margin: 80px auto;
+    background: rgb(255, 255, 255);
+    opacity: 0.8;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 30px;
+    color: rgb(25, 29, 41);
+    padding: 10px;
+    max-height: 100%;
+    max-width: 1200px;
+    overflow: auto;
+    min-height: 600px;
+}
+
+.contentDiv p{
+    margin: 30px;
+}
+
+.pageTitle{
+    font-weight: 700;
+    color: maroon;
+    padding: 10px;
+    font-size: 60px
+}
+
+.registerBtns{
+    background-color: maroon;
+    color:white;
+    border-radius: 20px;
+    border: none;
+    order: none;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.registerBtns:active{
+    background: white;
+    color: maroon;
+}
+
+
+/*form style*/
+.signUpFieldsets{
+    text-align: left;
+    border: none;
+    display: table-row;
+    margin: auto 60px;
+}
+
+.tableRow{
+    display: table-row-group;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.signUpFieldsets legend{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.signUpFieldsets label{
+    font-family: 'Adamina', serif;
+    font-size: 17px;
+    margin-left: 40px;
+    padding: 5px;
+}
+
+.signUpFieldsets input, .signUpFieldsets select{
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(75, 100, 174);
+    margin-left: 20px;
+    padding: 5px;
+    border: solid 0.2px rgb(25, 29, 41);
+    border-radius: 3px;
+    float: right;
+    margin-top: 10px;
+}
+.signUpFieldsets input[type=radio], .signUpFieldsets input[type=checkbox]{
+    float: none;
+    margin: 20px;
+}
+.radioBtnLabel{
+    font-size: 17px;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(75, 100, 174);
+}
+
+select{
+    min-width: 200px;
+}
+
+.submitBtnDiv{
+    margin: 20px;
+    padding: 20px;
+}
+
+.submitBtnDiv input[type=submit]{
+    background-color: maroon;
+    color:white;
+    border-radius: 20px;
+    border: none;
+    order: none;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.submitBtnDiv input[type=submit]:active{
+    background: white;
+    color: maroon;
+}
