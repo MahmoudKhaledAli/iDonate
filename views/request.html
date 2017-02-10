@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="sweetalert.css" rel="stylesheet" type="text/css">
+    <script src="./sweetalert.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <title>Emergency Request</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerContent">
+            <h1 class="logo">iDonate</h1>
+        </div>
+
+
+
+    </div>
+    <div class="contentDiv w3-container">
+        <h2 class="pageTitle">Emergency Request</h2>
+        <form class="signUpForm" onsubmit="return false" method="post">
+            <fieldset class="signUpFieldsets">
+                <center>
+                    <div class="tableRow">
+                        <label for="bloodTypeCB">Blood Type:</label>
+                        <select name="blood_type" id="bloodTypeCB">
+                                <option disabled selected value="">Select blood type.. </option>
+                                <option value="A+">A +ve</option>
+                                <option value="A-">A -ve</option>
+                                <option value="B+">B +ve</option>
+                                <option value="B-">B -ve</option>
+                                <option value="AB+">AB +ve</option>
+                                <option value="AB-">AB -ve</option>
+                                <option value="O+">O +ve</option>
+                                <option value="O-">O -ve</option>
+                            </select>
+                    </div>
+                </center>
+            </fieldset>
+            <div>
+                <button type="submit" class="registerBtns ajax-submit" data-url="" data-loading="waiting...">Submit</button>
+            </div>
+        </form>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./process.js"></script>
+</body>
+</html>

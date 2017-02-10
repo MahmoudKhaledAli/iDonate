@@ -103,14 +103,14 @@ h1.logo{
     font-size: 20px;
 }
 
-.signUpFieldsets label{
+.signUpFieldsets label, .requestForm label{
     font-family: 'Adamina', serif;
     font-size: 17px;
     margin-left: 40px;
     padding: 5px;
 }
 
-.signUpFieldsets input, .signUpFieldsets select{
+.signUpFieldsets input, .signUpFieldsets select, .requestForm select{
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     color: rgb(75, 100, 174);
@@ -156,4 +156,22 @@ select{
 .submitBtnDiv input[type=submit]:active{
     background: white;
     color: maroon;
+}
+
+.question{
+    font-size: 15px;
+    text-decoration: underline;
+    color: maroon;
+}
+
+
+.stock{
+    width: 100%;
+}
+
+.requestForm{
+    text-align: left;
+    border: none;
+    display: table-row;
+    margin: auto 60px;
 }

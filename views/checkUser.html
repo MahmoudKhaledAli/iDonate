@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
-        <title>Registration</title>
+        <title>Check User Status</title>
     </head>
     
     <body>
@@ -18,10 +18,17 @@
            
         </div>
         <div class="contentDiv w3-container">
-            <h2 class="pageTitle">Registration</h2>
-            
-            <a href="userRegister.html" id="registerUser" class="registerBtns">Register As a User</a><br>
-            <a href="hospitalRegister.html" id="registerHospital" class="registerBtns">Register As a Hospital</a>
+            <h2 class="pageTitle">Check User Status</h2>
+            <form class="signUpForm" name="loginForm" action="" method="post">
+                <fieldset id="loginInfo" class="signUpFieldsets">
+                        <div class="tableRow">
+                            <label for="natID">National ID</label>
+                            <input type="text" name="natID" id="natID" placeholder="Enter donor's ID..">
+                        </div>
+                        
+                    </fieldset>
+                <button type="submit" class="registerBtns">Check</button>
+            </form>
         </div>
     </body>
 </html>

@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="sweetalert.css" rel="stylesheet" type="text/css">
+        <script src="./sweetalert.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+        <title>Update Stock</title>
+    </head>
+    
+    <body>
+        <div class="header">
+            <div class="headerContent">
+                <h1 class="logo">iDonate</h1>
+            </div>
+            
+           
+        </div>
+        <div class="contentDiv w3-container">
+            <h2 class="pageTitle">Update Stock</h2>
+            <form class="signUpForm" name="loginForm" onsubmit="return false" method="post">
+                <center>
+                <div class="signUpFieldsets ">
+                        <div class="tableRow ">
+                            <label for="aPos">A +ve:</label>
+                            <input type="number" min="0" max="100" name="a_pos" id="aPos" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="aNeg">A -ve:</label>
+                            <input type="number" min="0" max="100" name="a_neg" id="aNeg" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="bPos">B +ve:</label>
+                            <input type="number" min="0" max="100" name="b_pos" id="bPos" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="bNeg">B -ve:</label>
+                            <input type="number" min="0" max="100" name="b_neg" id="bNeg" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="abPos">AB +ve:</label>
+                            <input type="number" min="0" max="100" name="ab_pos" id="abPos" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="abNeg">AB -ve:</label>
+                            <input type="number" min="0" max="100" name="ab_neg" id="abNeg" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="oPos">O +ve:</label>
+                            <input type="number" min="0" max="100" name="o_pos" id="oPos" value="50">
+                        </div>
+                    <div class="tableRow">
+                            <label for="oNeg">O -ve:</label>
+                            <input type="number" min="0" max="100" name="o_neg" id="oNeg" value="50">
+                        </div>
+                        
+                </div>
+                </center>
+                <button type="submit" data-url="" data-loading="waiting..."class="registerBtns">Update</button>
+            </form>
+            <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+            <script src="./process.js"></script>
+        </div>
+    </body>
+</html>

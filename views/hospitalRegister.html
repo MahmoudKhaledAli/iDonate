@@ -1,157 +1,166 @@
 <!DOCTYPE HTML>
+
 <html>
-    <head>
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
-        <title>Hospital Registration</title>
-    </head>
-    
-    <body>
-        <div class="header">
-            <div class="headerContent">
-                <h1 class="logo">iDonate</h1>
-            </div>
-            
-           
+
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="sweetalert.css" rel="stylesheet" type="text/css">
+    <script src="./sweetalert.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:400,700,900" rel="stylesheet">
+    <title>Hospital Registration</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="headerContent">
+            <h1 class="logo">iDonate</h1>
         </div>
-        <div class="contentDiv w3-container">
-            <h2 class="pageTitle">Hospital Registration</h2>
-            
-            <form name="signUpForm" class="signUpForm" method="post">
-                    
-                    <hr>
-                    <fieldset id="contactInfo" class="signUpFieldsets">
-                        <legend>Hospital Information:</legend>
-                        <div class="tableRow">
-                            <label for="nameTF">Hospital Name:</label>
-                            <input type="text" name="name" id="nameTF" placeholder="Enter hospital name..">
-                        </div>
-                        <div class="tableRow">
-                            <label for="emailTF">Email:</label>
-                            <input type="email" name="email" id="emailTF" placeholder="Enter your email address..">
-                        </div>
-                        <div class="tableRow">
-                            <label for="phoneNumTF">Phone number:</label>
-                            <input type="tel" name="phoneNum" id="phoneNumTF" placeholder="Enter your phone number..">
-                        </div>
-                    </fieldset>
-                    <hr>
-                    <fieldset id="loginInfo" class="signUpFieldsets">
-                        <legend>Login Information:</legend>
-                        <div class="tableRow">
-                            <label for="passwordTF">Password:</label>
-                            <input type="password" name="password" id="passwordTF" placeholder="Enter your password..">
-                        </div>
-                        <div class="tableRow">
-                            <label for="confirmPWTF">Confirm password:</label>
-                            <input type="password" name="confirmPW" id="confirmPWTF" placeholder="Confirm your password..">
-                        </div>
-                    </fieldset>
-                    <hr>
-                    <fieldset id="locationInfo" class="signUpFieldsets">
-                        <legend>Location Information:</legend>
-                        <div class="tableRow">
-                            <label for="cityCmbBox">City:</label>
-                            <select name="city" id="cityCmbBox" oninput="generateAreas()">
+
+
+    </div>
+    <div class="contentDiv w3-container">
+        <h2 class="pageTitle">Hospital Registration</h2>
+
+        <form name="signUpForm" class="signUpForm" onsubmit="return false" method="post">
+
+            <hr>
+            <fieldset id="contactInfo" class="signUpFieldsets">
+                <legend>Hospital Information:</legend>
+                <div class="tableRow">
+                    <label for="nameTF">Hospital Name:</label>
+                    <input type="text" name="name" id="nameTF" placeholder="Enter hospital name..">
+                </div>
+                <div class="tableRow">
+                    <label for="emailTF">Email:</label>
+                    <input type="email" name="email" id="emailTF" placeholder="Enter your email address..">
+                </div>
+                <div class="tableRow">
+                    <label for="phoneNumTF">Phone number:</label>
+                    <input type="tel" name="phone" id="phoneNumTF" placeholder="Enter your phone number..">
+                </div>
+            </fieldset>
+            <hr>
+            <fieldset id="loginInfo" class="signUpFieldsets">
+                <legend>Login Information:</legend>
+                <div class="tableRow">
+                    <label for="passwordTF">Password:</label>
+                    <input type="password" name="password" id="passwordTF" placeholder="Enter your password..">
+                </div>
+                <div class="tableRow">
+                    <label for="confirmPWTF">Confirm password:</label>
+                    <input type="password" name="conf_password" id="confirmPWTF" placeholder="Confirm your password..">
+                </div>
+            </fieldset>
+            <hr>
+            <fieldset id="locationInfo" class="signUpFieldsets">
+                <legend>Location Information:</legend>
+                <div class="tableRow">
+                    <label for="cityCmbBox">City:</label>
+                    <select name="city" id="cityCmbBox" oninput="generateAreas()">
                                 <option disabled selected value="">Select city.. </option>
                                 <option value="Cairo">Cairo</option>
                                 <option value="Alexandria">Alexandria</option>
                             </select>
-                        </div>
-                        <div class="tableRow">
-                            <label for="areaCmbBox">Area:</label>
-                            <select name="area" id="areaCmbBox">
+                </div>
+                <div class="tableRow">
+                    <label for="areaCmbBox">Area:</label>
+                    <select name="area" id="areaCmbBox">
                             </select>
-                        </div>
-                </fieldset>
-                    
-                    <div class="submitBtnDiv">
-                        <input onclick="validate();" type="submit" name="ss">
-                    </div>
-                </form>
-        </div>
-        <script type="text/javascript">
+                </div>
+            </fieldset>
+
+            <div class="submitBtnDiv">
+               <button type="submit" data-url="" data-loading="waiting..." name="ss">
+                   Submit
+               </button>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./process.js"></script>
+    <script type="text/javascript">
         var areaCmbBox = document.getElementById("areaCmbBox");
-var cityCmbBox = document.getElementById("cityCmbBox");
-            function generateAreas(){
-    //alert("infunc genArea");
-    var city = cityCmbBox.options[cityCmbBox.selectedIndex].value; 
-    removeOptions(areaCmbBox);
-    var optn = document.createElement("option");
-    optn.text = "Select area..";
-    optn.value = "";
-    areaCmbBox.options.add(optn);
-    if(city == "Cairo")
-        generateCairoAreas();
-    else
-        generateAlexandriaAreas();
-};
-            var cairoAreas = [
-    "Abbassia",
-    "Ain Shams",
-    "Azbakeya",
-    "Bab al-Louq",
-    "Bulaq",
-    "Coptic Cairo",
-    "Downtown Cairo",
-    "El Manial",
-    "El Marg",
-    "El Matareya",
-    "El Qobbah",
-    "El Sahel",
-    "El Sakkakini",
-    "Ezbet El Haggana",
-    "Faggala",
-    "Fifth Settlement",
-    "Fustat",
-    "Garden City",
-    "Heliopolis",
-    "Maadi",
-    "Nasr City",
-    "Old Cairo",
-    "Shubra",
-    "Shubra El Kheima",
-    "Zamalek",
-    "Zeitoun"
-];
+        var cityCmbBox = document.getElementById("cityCmbBox");
 
-var alexandriaAreas = [
-    "El Mansheya",
-    "Asafra",
-    "Abu Qir",
-    "Victoria",
-    "Hadara",
-    "El Mandara"
-];
+        function generateAreas() {
+            //alert("infunc genArea");
+            var city = cityCmbBox.options[cityCmbBox.selectedIndex].value;
+            removeOptions(areaCmbBox);
+            var optn = document.createElement("option");
+            optn.text = "Select area..";
+            optn.value = "";
+            areaCmbBox.options.add(optn);
+            if (city == "Cairo")
+                generateCairoAreas();
+            else
+                generateAlexandriaAreas();
+        };
+        var cairoAreas = [
+            "Abbassia",
+            "Ain Shams",
+            "Azbakeya",
+            "Bab al-Louq",
+            "Bulaq",
+            "Coptic Cairo",
+            "Downtown Cairo",
+            "El Manial",
+            "El Marg",
+            "El Matareya",
+            "El Qobbah",
+            "El Sahel",
+            "El Sakkakini",
+            "Ezbet El Haggana",
+            "Faggala",
+            "Fifth Settlement",
+            "Fustat",
+            "Garden City",
+            "Heliopolis",
+            "Maadi",
+            "Nasr City",
+            "Old Cairo",
+            "Shubra",
+            "Shubra El Kheima",
+            "Zamalek",
+            "Zeitoun"
+        ];
+
+        var alexandriaAreas = [
+            "El Mansheya",
+            "Asafra",
+            "Abu Qir",
+            "Victoria",
+            "Hadara",
+            "El Mandara"
+        ];
 
 
 
-function removeOptions(selectbox){
-    for(var i = selectbox.options.length - 1 ; i >= 0 ; i--){
-        selectbox.remove(i);
-    }
-};
+        function removeOptions(selectbox) {
+            for (var i = selectbox.options.length - 1; i >= 0; i--) {
+                selectbox.remove(i);
+            }
+        };
 
-function generateCairoAreas(){
-    for (var area of cairoAreas){
-        var opt = document.createElement("option");
-        opt.text = area;
-        opt.value = area;
-        areaCmbBox.options.add(opt);
-    }
-};
+        function generateCairoAreas() {
+            for (var area of cairoAreas) {
+                var opt = document.createElement("option");
+                opt.text = area;
+                opt.value = area;
+                areaCmbBox.options.add(opt);
+            }
+        };
 
-function generateAlexandriaAreas(){
-    for (var area of alexandriaAreas){
-        var opt = document.createElement("option");
-        opt.text = area;
-        opt.value = area;
-        areaCmbBox.options.add(opt);
-    }
-};
-        </script>
-    </body>
+        function generateAlexandriaAreas() {
+            for (var area of alexandriaAreas) {
+                var opt = document.createElement("option");
+                opt.text = area;
+                opt.value = area;
+                areaCmbBox.options.add(opt);
+            }
+        };
+    </script>
+</body>
 </html>

@@ -20,7 +20,7 @@
 
         var formData = new FormData(form[0]);
         
-        if(form.attr('method') == 'get'){
+        if(form.attr('method') == 'get' || form.attr('method') == 'GET'){
             formData = form.serialize();
         }
       
